@@ -2,7 +2,6 @@ import './index';
 
 import NewExpense from './components/NewExpense/NewExpense';
 import Expenses from './components/Expenses/Expenses';
-// import ExpensesFilter from './components/NewExpense/ExpensesFilter';
 import { useState } from 'react';
 
 const App = () => {
@@ -16,13 +15,10 @@ const App = () => {
 
 
   const addExpenseHandler = (expense) => {
-    setExpenses((prevExpense) => {
-      return {
-        ...prevExpense,
-        ...expense
-      }
-    }
-    )
+    // setExpenses([expense, ...expenses])
+    setExpenses(prevExpenses => {
+      return [expense, ...prevExpenses]
+    })
   }
   return (
     <div className="App">
