@@ -8,7 +8,7 @@ import ExpensesChart from './ExpensesChart.js';
 
 
 const Expenses = (props) => {
-    const [filteredYear, setfilteredYear] = useState('2021');
+    const [filteredYear, setfilteredYear] = useState(new Date().getFullYear().toString());
     const [isChartOnOff, setChartOnOff] = useState(true);
 
     const chartOnOffHandler = () => {
