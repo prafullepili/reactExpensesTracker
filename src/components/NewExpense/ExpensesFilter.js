@@ -17,7 +17,7 @@ const ExpensesFilter = ({ onChangeFileter, selectedYear }) => {
     return (
         <div className='expenses-filter'>
             <div className='expenses-filter__control'>
-                <label>Filter by year </label>
+                <label>Filter by year <button>Chart</button></label>
                 <select value={selectedYear} onChange={dropdownChangeHandler}>
                     {datesOptions}
                 </select>

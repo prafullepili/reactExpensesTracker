@@ -14,7 +14,7 @@
 .expenses-filter label {
   display: flex; /*added after changes*/
   font-weight: bold;
-  /* gap: 35px; */
+  gap: 35px;
 }
 .expenses-filter label button {
   padding: 2px 5px;
