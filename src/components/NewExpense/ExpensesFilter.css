@@ -14,11 +14,12 @@
 .expenses-filter label {
   display: flex; /*added after changes*/
   font-weight: bold;
-  gap: 35px;
+  gap: 30px;
 }
 .expenses-filter label button {
-  padding: 2px 5px;
+  padding: 5px 7px;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .expenses-filter select {

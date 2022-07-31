@@ -1,7 +1,7 @@
 import React from 'react';
 import "./ExpensesFilter.css";
 
-const ExpensesFilter = ({ onChangeFileter, selectedYear }) => {
+const ExpensesFilter = ({ chartOnOffHandler, onChangeFileter, selectedYear, isChartOnOff }) => {
 
     const dropdownChangeHandler = (event) => {
         onChangeFileter(event.target.value);
@@ -17,7 +17,7 @@ const ExpensesFilter = ({ onChangeFileter, selectedYear }) => {
     return (
         <div className='expenses-filter'>
             <div className='expenses-filter__control'>
-                <label>Filter by year <button>Chart</button></label>
+                <label>Filter by year <button type='button' onClick={chartOnOffHandler}>{isChartOnOff ? 'Hide chart' : 'Show chart'}</button></label>
                 <select value={selectedYear} onChange={dropdownChangeHandler}>
                     {datesOptions}
                 </select>

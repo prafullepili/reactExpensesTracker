@@ -9,7 +9,11 @@ import ExpensesChart from './ExpensesChart.js';
 
 const Expenses = (props) => {
     const [filteredYear, setfilteredYear] = useState('2021');
+    const [isChartOnOff, setChartOnOff] = useState(false);
 
+    const chartOnOffHandler = () => {
+        setChartOnOff((prevState) => !prevState)
+    }
     const filterChangeHandler = selectedYearTemp => {
         setfilteredYear(selectedYearTemp)
     }
@@ -19,8 +23,13 @@ const Expenses = (props) => {
 
 
     return <Card className='expenses'>
-        <ExpensesFilter selectedYear={filteredYear} onChangeFileter={filterChangeHandler} />
-        <ExpensesChart expenses={filteredExpenses} />
+        <ExpensesFilter
+            chartOnOffHandler={chartOnOffHandler}
+            selectedYear={filteredYear}
+            onChangeFileter={filterChangeHandler}
+            isChartOnOff={isChartOnOff}
+        />
+        {isChartOnOff && <ExpensesChart expenses={filteredExpenses} />}
         <ExpensesList filteredExpenses={filteredExpenses} />
     </Card>
 }
