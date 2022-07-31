@@ -10,25 +10,25 @@
 }
 
 .chart-bar__inner {
+  display: flex;
+  justify-content: flex-end;
   height: 100%;
   width: 100%;
   border: 1px solid #313131;
-  border-radius: 12px;
-  background-color: #c3b4f3;
+  border-radius: 10px;
+  background-color: #dfece95a;
   overflow: hidden;
-  display: flex;
   flex-direction: column;
-  justify-content: flex-end;
 }
 
 .chart-bar__fill {
   background-color: #4826b9;
   width: 100%;
-  transition: all 0.3s ease-out;
+  transition: all .8s ease-out;
 }
 
 .chart-bar__label {
   font-weight: bold;
-  font-size: 0.5rem;
+  font-size: 0.6rem;
   text-align: center;
 }
