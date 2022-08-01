@@ -10,6 +10,7 @@ const ExpensesChart = ({ expenses }) => {
         { label: 'Apr', monthCost: 0 },
         { label: 'May', monthCost: 0 },
         { label: 'Jun', monthCost: 0 },
+        { label: 'Jul', monthCost: 0 },
         { label: 'Aug', monthCost: 0 },
         { label: 'Sep', monthCost: 0 },
         { label: 'Oct', monthCost: 0 },
