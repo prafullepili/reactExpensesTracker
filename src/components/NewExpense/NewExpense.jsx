@@ -12,7 +12,7 @@ const NewExpense = ({onSaveAddExpense}) => {
             ...enteredExpenseData,
             id : Math.random().toString().split(".")[1]
         }
-        onSaveAddExpense(expenseData);
+        onSaveAddExpense(expenseData); //executing on App.js
         setisEditing(true)
     }
   
