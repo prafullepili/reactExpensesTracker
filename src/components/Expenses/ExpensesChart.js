@@ -23,7 +23,6 @@ const ExpensesChart = ({ expenses }) => {
         const expenseMonth = expense.date.getMonth(); /*It return expenseMonth as Index of chartDataPoints array */
         chartDataPoints[expenseMonth].monthCost += expense.amount /** It get all expense by month and store as total expense of month */
     }
-    console.log(chartDataPoints)
 
     return <Chart dataPoints={chartDataPoints} />
 }

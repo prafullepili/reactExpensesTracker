@@ -10,6 +10,9 @@ const ChartBar = props => {
     }
     return (
         <div className="chart-bar">
+            <div>
+                <small className="chart-bar__label">{props.monthCost}&#8377;</small>
+            </div>
             <div className="chart-bar__inner">
                 <div className="chart-bar__fill" style={{ height: barFillHeight }}></div>
             </div>
